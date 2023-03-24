@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(to right, #66ccff 0%, #000000 100%);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+h1{
+    text-align: center;
+    font-size: 240%;
+    color: white;
+}
+
+.card{
+    width: 600px;
+    height: 70px;
+    margin-right: 50px;
+    margin-left: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #80ced6;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
+
+.box1{
+    width: 60px;
+    height: 30px;
+    background-color: red;
+}
+
+.bt{
+    width: 1000px;
+    height: 30px;
+}
+
+input{
+    align-self: first;
+}
