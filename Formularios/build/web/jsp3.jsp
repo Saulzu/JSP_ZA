@@ -36,16 +36,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="jsp3.jsp">JSP3</a>
                         </li>
-                <!--<li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Practicas
                         </a>
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="jsp1.jsp"></a></li>
-                        <li><a class="dropdown-item" href="jsp2.jsp"></a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="jsp1.jsp"></a>Practica 1</li>
+                        <li><a class="dropdown-item" href="jsp2.jsp"></a>Practica 2</li>
+                        <li><a class="dropdown-item" href="AgregaCliente"></a>Practica 3</li>
                     </ul>
-                </li>-->
+                </li>
                 </div>
             </div>
         </nav> <br>
