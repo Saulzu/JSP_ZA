@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author alumno
  */
-/**@WebServlet(name = "AgregaCliente", urlPatterns = {"/AgregaCliente"})*/
+@WebServlet(name = "AgregaCliente", urlPatterns = {"/AgregaCliente"})
 public class AgregaCliente extends HttpServlet {
 
     /**
@@ -30,7 +30,7 @@ public class AgregaCliente extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String accion = null;
@@ -44,17 +44,18 @@ public class AgregaCliente extends HttpServlet {
             out.println("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
             out.println("<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anónimo\">");
             out.println("<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\" crossorigin=\"anonymous\"></script>");
-            out.println("<title>Servlet AgregaCliente</title>");
+            out.println("<title>Servlet AgregaCliente</title>"); 
             
             out.println("<script>");
             out.println("function redirigir() {");
             out.println("document.forms[\"form1\"].action = \"ClienteList\";");
             out.println("}");
             out.println("</script> ");
-                
+            
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
             out.println("</head>");
             out.println("<body>");
+            
             out.println("<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">");
             out.println("<div class=\"container-fluid\">");
             out.println("<a class=\"navbar-brand\" href=\"index.html\">Inicio</a>");
@@ -83,6 +84,7 @@ public class AgregaCliente extends HttpServlet {
             out.println("</div>");
             out.println("</div>");
             out.println("</nav> <br>");
+            
             accion = request.getParameter("guardar" );
             if(accion != null && "Guardar".equals(accion) )
             {
@@ -92,7 +94,6 @@ public class AgregaCliente extends HttpServlet {
             {
                 imprimirFormulario( out );
             }
-            
             out.println("</body>");
             out.println("</html>");
         }
@@ -126,7 +127,6 @@ public class AgregaCliente extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
-    
 
     /**
      * Returns a short description of the servlet.
@@ -141,9 +141,7 @@ public class AgregaCliente extends HttpServlet {
 
     public void imprimirFormulario( PrintWriter out )
     {
-        
-        
-        out.println("<form id=\"form1\"  onsubmit=\"redirigir()\">");
+        out.println("<form id=\"form1\">");
         out.println("<table border=\"1\">");
         out.println("<tr>");
         out.println("<td>Nombre</td><td>");
@@ -188,6 +186,8 @@ public class AgregaCliente extends HttpServlet {
             request.getSession().setAttribute("clientes", list);
         }
         list.add(cliente);
+        
+        
     }
     
     private Integer getCampoInteger( String parametro )
@@ -201,5 +201,4 @@ public class AgregaCliente extends HttpServlet {
             return  null;
         }
     }
-    
 }

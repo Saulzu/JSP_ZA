@@ -88,7 +88,7 @@
                 {
             %>
             <tr>
-                <td><h6 align="center"><%=i + 1%></h6>
+                <td><h1 align="center"><%=i + 1%></h1>
                 <td><h6 align="center"><%=i%></h6>
                 <td><h6 align="center"><%=datos.getNombre()%></h6></td>
                 <td><h6 align="center"><%=datos.getCalf()%></h6></td>
