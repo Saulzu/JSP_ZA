@@ -1,5 +1,4 @@
-package source;
-
+package org.gerdoc;
 import java.io.Serializable;
 
 /*
